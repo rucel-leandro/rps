@@ -2,16 +2,14 @@
 
 function getComputerChoise() {
     let randomPick = Math.random(); 
-    console.log(randomPick);
-
-   
+  
     if (randomPick <= 0.33) {
-        console.log("Rock"); 
+        return ("Rock"); 
     } else if (randomPick >= 0.33 && randomPick <= 0.66) { 
-        console.log("Paper"); 
+        return ("Paper"); 
     } else if (randomPick >= 0.66 && randomPick <= 1) { 
-        console.log("Scissors"); } 
-        else console.log("Something's wrong!")
+        return ("Scissors"); } 
+        else return ("Something's wrong!")
 
 }
 
