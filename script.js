@@ -1,5 +1,7 @@
 // Functions
 
+
+
 function getComputerChoise() {
     let randomPick = Math.random(); 
   
@@ -12,4 +14,46 @@ function getComputerChoise() {
         else return ("Something's wrong!")
 
 }
+
+let computerSelection = getComputerChoise(); 
+console.log(computerSelection);
+
+let playersSelection = prompt("Make a choice")
+
+
+// Game logic not working. If it is a draw it outputs You lose!
+    
+    if (playersSelection == computerSelection) {
+        console.log("It's a draw!"); 
+    } switch (playersSelection , computerSelection) {
+        case "Rock", "Paper":
+            console.log(`You lose! ${computerSelection} beats ${playersSelection}`);
+            break;
+        case "Rock", "Scissors":
+            console.log(`You win! ${playersSelection} beats ${computerSelection}`);
+            break;
+
+        case "Paper", "Rock":
+            console.log(`You win! ${playersSelection} beats ${computerSelection}`);
+            break;
+
+        case "Paper", "Scissors":
+          console.log(`You lose! ${computerSelection} beats ${playersSelection}`);
+            break;
+
+        case "Scissors", "Paper":
+        console.log(`You win! ${playersSelection} beats ${computerSelection}`);
+        break;
+
+        case "Scissors", "Rock":
+        console.log(`You lose! ${computerSelection} beats ${playersSelection}`);
+        break;
+        
+        default: 
+        console.log("Error"); 
+              
+    }
+    
+
+
 
