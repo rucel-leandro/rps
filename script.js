@@ -1,6 +1,6 @@
 // Functions
 
-
+let computerSelection = getComputerChoise();
 
 function getComputerChoise() {
     let randomPick = Math.random(); 
@@ -15,55 +15,26 @@ function getComputerChoise() {
 
 }
 
-let computerSelection = getComputerChoise();
-
-
-
-// Game logic not working. If it is a draw it outputs You lose! Check winning condition for the Computer
-    
-   
-// if (playersSelection === computerSelection) {
-//     console.log("It's a draw!");
-// } switch (playersSelection , computerSelection) {
-//         case ("Rock", "Paper"):
-//             console.log(`You lose! ${computerSelection} beats ${playersSelection}`);
-//             break;
-//         case ("Rock", "Scissors"):
-//             console.log(`You win! ${playersSelection} beats ${computerSelection}`);
-//             break;
-
-//         case ("Paper", "Rock"):
-//             console.log(`You win! ${playersSelection} beats ${computerSelection}`);
-//             break;
-
-//         case ("Paper", "Scissors"):
-//           console.log(`You lose! ${computerSelection} beats ${playersSelection}`);
-//             break;
-
-//         case ("Scissors", "Paper"):
-//         console.log(`You win! ${playersSelection} beats ${computerSelection}`);
-//         break;
-
-//         case ("Scissors", "Rock"):
-//         console.log(`You lose! ${computerSelection} beats ${playersSelection}`);
-//         break;
-
-//         default: 
-//         console.log("Error"); 
-              
-//     }
-    
-
 
 function playGame (playersSelection , computerSelection = getComputerChoise()) {   
-    console.log(computerSelection);
+
     console.log(playersSelection);
+    console.log(computerSelection);
 
     if (playersSelection === computerSelection) {
         console.log("It's a draw!")
+    } 
+    else if (playersSelection == "Paper" && computerSelection == "Rock") {
+        console.log("You win! Paper beats Rock.")
+    } else if (playersSelection == "Paper" && computerSelection == "Scissors") {
+        console.log("You lose! Scissors beats Paper.");
+    } else if (playersSelection == "Rock" && computerSelection == "Scissors") {
+        console.log("You win! Rock beats Scissors.");
+    } else if (playersSelection == "Rock" && computerSelection == "Paper") {
+        console.log("You lose! Paper beats Rock.");
+    } else if (playersSelection == "Scissors" && computerSelection == "Paper") {
+        console.log("You win! Scissors beats Paper.");
+    } else if (playersSelection == "Scissors" && computerSelection == "Rock") {
+        console.log("You lose! Rock beats Scissors.");
     }
-    
-
-  
 }
-
